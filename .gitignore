@@ -1,0 +1,18 @@
+# 데이터 파일 (Google Drive로 공유)
+data/filtered_feature_bc_matrix/
+*.rds
+*.h5
+*.h5ad
+
+# 대용량 HTML (필요시 제외)
+# data/web_summary/
+
+# R 임시 파일
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
