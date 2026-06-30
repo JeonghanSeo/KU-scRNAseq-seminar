@@ -28,12 +28,14 @@ Single-cell RNA-seq 기초부터 고급 분석까지 — Google Colab + Seurat (
 - 필터링 기준: `nFeature > 200`, `nCount > 500`, `percent.mt < 10%`
 - 정규화 (LogNormalize) 및 고변이 유전자(HVG) 선택
 
-### Part 2 — Integration, Clustering & UMAP *(준비 중)*
+### Part 2 — Integration, Clustering & Annotation
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JeonghanSeo/KU-scRNAseq-seminar/blob/main/notebooks/02_integration_clustering_annotation.ipynb)
 
-- Seurat Integration (Young vs Old)
-- PCA → UMAP
-- FindNeighbors → FindClusters
-- 마커 유전자 & 세포 타입 어노테이션
+- Cell Cycle Scoring (optional regression)
+- Harmony Integration (Young vs Old 배치 보정)
+- PCA → UMAP 시각화
+- Clustering Resolution 비교 (0.2 ~ 0.8)
+- FindAllMarkers + 망막 세포 타입 어노테이션
 
 ### Part 3 (Advanced) — CellChat & Monocle3 *(준비 중)*
 
