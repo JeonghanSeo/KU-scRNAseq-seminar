@@ -7,14 +7,26 @@ Single-cell RNA-seq 기초 분석 실습 — Google Colab + Seurat (R)
 
 ## 데이터셋
 
-**GSE210543** — Human Retina scRNA-seq (Young vs Old)
+**GSE210543** — Human Retina scRNA-seq (Developmental & Adult)  
+[Cell Ranger Web Summary 파일 →](data/web_summary/)
 
-| 샘플 | 그룹 | 세포 수 |
-|------|------|--------|
-| 16PCW | Young (발달기) | 8,601 |
-| 20PCW | Young (발달기) | 5,787 |
-| Adult_2 | Old (성체) | 6,516 |
-| Adult_3 | Old (성체) | 3,694 |
+| 샘플 | 그룹 | Est. Cells | Mean Reads/Cell | Median Genes/Cell | 분석 |
+|------|------|----------:|----------------:|------------------:|:----:|
+| **16PCW** | Young | **8,601** | 43,243 | 1,084 | ✅ |
+| **20PCW** | Young | **5,787** | 103,036 | 5,174 | ✅ |
+| 12PCW | Young | 3,637 | 164,166 | 4,596 | — |
+| 21PCW | Young | 3,948 | 139,139 | 1,953 | — |
+| **Adult_2** | Old | **6,516** | 90,897 | 2,016 | ✅ |
+| **Adult_3** | Old | **3,694** | 142,303 | 2,806 | ✅ |
+| Adult_5 | Old | 3,487 | 168,631 | 2,529 | — |
+| Adult_1 | Old | 884 | 412,206 | 2,807 | ❌ |
+| Adult_4 | Old | 496 | 1,146,570 | 2,414 | ❌ |
+| AMD_macula | AMD | 1,719 | 284,749 | 4,002 | — |
+| AMD_peripheral | AMD | 1,794 | 267,813 | 3,584 | — |
+| Unaffected_macula | Control | 3,557 | 101,143 | 5,102 | — |
+| Unaffected_peripheral | Control | 3,527 | 112,731 | 4,765 | — |
+
+> ✅ 세미나 분석 샘플 (Young 2 + Old 2) | ❌ 세포 수 부족 또는 품질 이슈
 
 ---
 
