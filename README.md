@@ -93,3 +93,4 @@ git clone https://github.com/JeonghanSeo/KU-scRNAseq-seminar.git
 - [Seurat 공식 문서](https://satijalab.org/seurat/)
 - [Harmony](https://github.com/immunogenomics/harmony)
 - [GSE210543 on GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE210543)
+- [DoubletFinder (McGinnis et al., Cell Systems 2019)](https://doi.org/10.1016/j.cels.2019.03.003) — 노트북 Step 2에서 원리만 설명, 실행은 생략
