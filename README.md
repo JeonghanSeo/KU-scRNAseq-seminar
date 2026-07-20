@@ -55,7 +55,7 @@ git clone https://github.com/JeonghanSeo/KU-scRNAseq-seminar.git
 
 | Step | 내용 | 시간 |
 |------|------|------|
-| 0 | 환경 설정 (패키지 1회 설치) | 10분 |
+| 0 | 환경 설정 (패키지 설치, 참가자별 실행) | 10분 |
 | 1 | 10X 데이터 불러오기 | 10분 |
 | 2 | QC 이론 + 시각화 (nFeature / nCount / percent.mt) | 30분 |
 | 3 | QC 필터링 (`nFeature > 200`, `nCount > 500`, `mt < 10%`) | 10분 |
@@ -81,8 +81,9 @@ git clone https://github.com/JeonghanSeo/KU-scRNAseq-seminar.git
 
 1. 위 Colab 배지 클릭
 2. Runtime → Change runtime type → **R**
-3. Step 0 안내에 따라 Drive 공유 폴더 바로가기 추가 (R 패키지 로드용 — 데이터는 GitHub에서 자동으로 받아옵니다)
-4. Step 0부터 순서대로 실행
+3. Step 0부터 순서대로 실행 — 첫 셀에서 R 패키지를 설치합니다 (참가자별로 각자 실행, 약 5~10분. 데이터는 별도로 GitHub에서 자동으로 받아옵니다)
+
+> Colab R 런타임은 Google Drive 마운트를 지원하지 않아서, 패키지 설치는 공유 없이 각자 진행합니다.
 
 > 세션이 끊기면 Step 0 (라이브러리 로드) 후 중간 체크포인트 셀에서 재개 가능
 
