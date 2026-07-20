@@ -12,9 +12,9 @@ Single-cell RNA-seq 기초 분석 실습 — Google Colab + Seurat (R)
 
 | 샘플 | 그룹 | Est. Cells | Mean Reads/Cell | Median Genes/Cell | 분석 |
 |------|------|----------:|----------------:|------------------:|:----:|
-| **16PCW** | Young | **8,601** | 43,243 | 1,084 | ✅ |
+| 16PCW | Young | 8,601 | 43,243 | 1,084 | — |
 | **20PCW** | Young | **5,787** | 103,036 | 5,174 | ✅ |
-| 12PCW | Young | 3,637 | 164,166 | 4,596 | — |
+| **12PCW** | Young | **3,637** | 164,166 | **4,596** | ✅ |
 | 21PCW | Young | 3,948 | 139,139 | 1,953 | — |
 | **Adult_2** | Old | **6,516** | 90,897 | 2,016 | ✅ |
 | **Adult_3** | Old | **3,694** | 142,303 | 2,806 | ✅ |
@@ -44,7 +44,7 @@ git clone https://github.com/JeonghanSeo/KU-scRNAseq-seminar.git
 
 **방법 3 — 필요한 샘플 폴더만 다운로드**
 - 개별 파일: 저장소에서 `data/filtered_feature_bc_matrix/<샘플명>/` 폴더로 들어가 각 파일(barcodes.tsv.gz, features.tsv.gz, matrix.mtx.gz) 클릭 → 우측 상단 **Download raw file** 버튼
-- 폴더 전체를 zip으로 받고 싶다면 [download-directory.github.io](https://download-directory.github.io/) 같은 서드파티 툴에 해당 폴더 URL(예: `https://github.com/JeonghanSeo/KU-scRNAseq-seminar/tree/main/data/filtered_feature_bc_matrix/16PCW`)을 붙여넣으면 그 샘플만 zip으로 받을 수 있습니다.
+- 폴더 전체를 zip으로 받고 싶다면 [download-directory.github.io](https://download-directory.github.io/) 같은 서드파티 툴에 해당 폴더 URL(예: `https://github.com/JeonghanSeo/KU-scRNAseq-seminar/tree/main/data/filtered_feature_bc_matrix/12PCW`)을 붙여넣으면 그 샘플만 zip으로 받을 수 있습니다.
 
 ---
 

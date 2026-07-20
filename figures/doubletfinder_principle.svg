@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 480" font-family="'Segoe UI', 'Noto Sans KR', 'Helvetica Neue', Arial, sans-serif">
+  <rect x="0" y="0" width="1240" height="480" fill="#FBFAF7"/>
+
+  <!-- Title -->
+  <text x="620" y="33" text-anchor="middle" font-size="22" font-weight="700" fill="#1C2230">DoubletFinder — Artificial Nearest Neighbor 원리</text>
+  <text x="620" y="54" text-anchor="middle" font-size="12.5" font-style="italic" fill="#5B6472">McGinnis, Murrow &amp; Gartner — Cell Systems, 2019 (doi:10.1016/j.cels.2019.03.003)</text>
+
+  <!-- Panel cards -->
+  <rect x="28" y="76" width="372" height="302" rx="16" fill="#FFFFFF" stroke="#D9DEE4" stroke-width="1.5"/>
+  <rect x="434" y="76" width="372" height="302" rx="16" fill="#FFFFFF" stroke="#D9DEE4" stroke-width="1.5"/>
+  <rect x="840" y="76" width="372" height="302" rx="16" fill="#FFFFFF" stroke="#D9DEE4" stroke-width="1.5"/>
+
+  <!-- Pipeline arrows -->
+  <text x="417" y="238" text-anchor="middle" font-size="30" fill="#9AA3AF">→</text>
+  <text x="823" y="238" text-anchor="middle" font-size="30" fill="#9AA3AF">→</text>
+
+  <!-- ══════════ Panel 1 : Simulate Doublets ══════════ -->
+  <text x="214" y="110" text-anchor="middle" font-size="16.5" font-weight="700" fill="#1C2230">① 인공 Doublet 생성</text>
+
+  <!-- droplet -->
+  <circle cx="118" cy="220" r="52" fill="#EEF2FA" stroke="#3B5BA9" stroke-width="1.5"/>
+  <circle cx="103" cy="207" r="15" fill="#3B5BA9"/>
+  <circle cx="132" cy="235" r="13" fill="#6FA8DC"/>
+  <text x="118" y="292" text-anchor="middle" font-size="11.5" fill="#5B6472">droplet 안 세포 2개</text>
+
+  <!-- arrow + average -->
+  <line x1="180" y1="220" x2="248" y2="220" stroke="#9AA3AF" stroke-width="2"/>
+  <polygon points="248,220 238,215 238,225" fill="#9AA3AF"/>
+  <text x="214" y="205" text-anchor="middle" font-size="11" fill="#5B6472">무작위 평균</text>
+
+  <!-- artificial doublet result -->
+  <polygon points="318,196 342,220 318,244 294,220" fill="#D1373F" stroke="#A81F27" stroke-width="1.5"/>
+  <text x="318" y="292" text-anchor="middle" font-size="11.5" fill="#5B6472">인공 Doublet 1개</text>
+
+  <text x="214" y="345" text-anchor="middle" font-size="12.5" fill="#3A4150">
+    <tspan x="214" dy="0">무작위로 고른 세포 2개의 발현을 평균내어</tspan>
+    <tspan x="214" dy="18">가짜 doublet을 대량 생성 (전체 세포의 ~25%)</tspan>
+  </text>
+
+  <!-- ══════════ Panel 2 : Dimensionality Reduction ══════════ -->
+  <text x="620" y="110" text-anchor="middle" font-size="16.5" font-weight="700" fill="#1C2230">② PCA 임베딩 + 이웃 탐색</text>
+
+  <!-- axes -->
+  <line x1="474" y1="140" x2="474" y2="300" stroke="#B7BEC8" stroke-width="1.5"/>
+  <line x1="474" y1="300" x2="760" y2="300" stroke="#B7BEC8" stroke-width="1.5"/>
+  <text x="466" y="146" text-anchor="end" font-size="11" fill="#9AA3AF">PC2</text>
+  <text x="760" y="314" text-anchor="end" font-size="11" fill="#9AA3AF">PC1</text>
+
+  <!-- cluster A -->
+  <circle cx="550" cy="175" r="5" fill="#3B5BA9"/>
+  <circle cx="565" cy="170" r="5" fill="#3B5BA9"/>
+  <circle cx="555" cy="190" r="5" fill="#3B5BA9"/>
+  <circle cx="575" cy="182" r="5" fill="#3B5BA9"/>
+  <circle cx="545" cy="195" r="5" fill="#3B5BA9"/>
+  <circle cx="568" cy="196" r="5" fill="#3B5BA9"/>
+
+  <!-- cluster B -->
+  <circle cx="640" cy="225" r="5" fill="#3B5BA9"/>
+  <circle cx="655" cy="220" r="5" fill="#3B5BA9"/>
+  <circle cx="645" cy="240" r="5" fill="#3B5BA9"/>
+  <circle cx="665" cy="232" r="5" fill="#3B5BA9"/>
+  <circle cx="635" cy="245" r="5" fill="#3B5BA9"/>
+
+  <!-- cluster C -->
+  <circle cx="700" cy="150" r="5" fill="#3B5BA9"/>
+  <circle cx="715" cy="145" r="5" fill="#3B5BA9"/>
+  <circle cx="695" cy="160" r="5" fill="#3B5BA9"/>
+  <circle cx="718" cy="163" r="5" fill="#3B5BA9"/>
+
+  <!-- artificial doublets scattered between clusters -->
+  <polygon points="600,199 608,205 600,211 592,205" fill="#D1373F"/>
+  <polygon points="615,184 623,190 615,196 607,190" fill="#D1373F"/>
+  <polygon points="630,209 638,215 630,221 622,215" fill="#D1373F"/>
+  <polygon points="680,184 688,190 680,196 672,190" fill="#D1373F"/>
+  <polygon points="605,224 613,230 605,236 597,230" fill="#D1373F"/>
+  <polygon points="720,169 728,175 720,181 712,175" fill="#D1373F"/>
+
+  <!-- query cell + neighbor circle -->
+  <circle cx="590" cy="200" r="6" fill="#1C2230" stroke="#FFFFFF" stroke-width="1"/>
+  <circle cx="590" cy="200" r="38" fill="none" stroke="#1C2230" stroke-width="1.2" stroke-dasharray="4 3"/>
+
+  <line x1="622" y1="230" x2="660" y2="258" stroke="#9AA3AF" stroke-width="1"/>
+  <text x="663" y="256" font-size="11" fill="#3A4150">이웃 3개 중 2개가 인공 Doublet</text>
+  <text x="663" y="270" font-size="11" fill="#3A4150">→ 이 세포는 pANN이 높음</text>
+
+  <!-- legend -->
+  <circle cx="452" cy="288" r="5" fill="#3B5BA9"/>
+  <text x="463" y="292" font-size="11" fill="#5B6472">실제 세포</text>
+  <polygon points="524,283 532,288 524,293 516,288" fill="#D1373F"/>
+  <text x="537" y="292" font-size="11" fill="#5B6472">인공 Doublet</text>
+
+  <text x="620" y="345" text-anchor="middle" font-size="12.5" fill="#3A4150">
+    <tspan x="620" dy="0">인공 Doublet을 실제 세포와 함께 PCA 공간에 배치 —</tspan>
+    <tspan x="620" dy="18">두 클러스터 '사이'에 몰리는 경향을 보입니다</tspan>
+  </text>
+
+  <!-- ══════════ Panel 3 : Doublet Identification ══════════ -->
+  <text x="1026" y="110" text-anchor="middle" font-size="16.5" font-weight="700" fill="#1C2230">③ pANN 기반 분류</text>
+
+  <!-- axes -->
+  <line x1="860" y1="140" x2="860" y2="300" stroke="#B7BEC8" stroke-width="1.5"/>
+  <line x1="860" y1="300" x2="1180" y2="300" stroke="#B7BEC8" stroke-width="1.5"/>
+  <text x="860" y="132" text-anchor="middle" font-size="10.5" fill="#9AA3AF">세포 수</text>
+  <text x="1180" y="314" text-anchor="end" font-size="11" fill="#9AA3AF">pANN (인공 이웃 비율)</text>
+
+  <!-- histogram bars -->
+  <rect x="865"  y="170" width="17" height="130" fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="884"  y="150" width="17" height="150" fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="903"  y="160" width="17" height="140" fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="922"  y="190" width="17" height="110" fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="941"  y="220" width="17" height="80"  fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="960"  y="245" width="17" height="55"  fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="979"  y="265" width="17" height="35"  fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="998"  y="280" width="17" height="20"  fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="1017" y="288" width="17" height="12"  fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="1036" y="290" width="17" height="10"  fill="#DCE6F7" stroke="#3B5BA9" stroke-width="1"/>
+  <rect x="1055" y="286" width="17" height="14"  fill="#F8DEE0" stroke="#D1373F" stroke-width="1"/>
+  <rect x="1074" y="278" width="17" height="22"  fill="#F8DEE0" stroke="#D1373F" stroke-width="1"/>
+  <rect x="1093" y="266" width="17" height="34"  fill="#F8DEE0" stroke="#D1373F" stroke-width="1"/>
+  <rect x="1112" y="274" width="17" height="26"  fill="#F8DEE0" stroke="#D1373F" stroke-width="1"/>
+  <rect x="1131" y="286" width="17" height="14"  fill="#F8DEE0" stroke="#D1373F" stroke-width="1"/>
+  <rect x="1150" y="294" width="17" height="6"   fill="#F8DEE0" stroke="#D1373F" stroke-width="1"/>
+
+  <!-- threshold -->
+  <line x1="1046" y1="140" x2="1046" y2="300" stroke="#1C2230" stroke-width="1.3" stroke-dasharray="5 4"/>
+  <text x="1046" y="132" text-anchor="middle" font-size="10.5" fill="#1C2230">threshold</text>
+
+  <text x="905" y="148" text-anchor="middle" font-size="11.5" font-weight="600" fill="#3B5BA9">Singlets</text>
+
+  <line x1="1101" y1="262" x2="1145" y2="205" stroke="#9AA3AF" stroke-width="1"/>
+  <text x="1205" y="177" text-anchor="end" font-size="11.5" font-weight="600" fill="#D1373F">Predicted</text>
+  <text x="1205" y="191" text-anchor="end" font-size="11.5" font-weight="600" fill="#D1373F">Doublets</text>
+
+  <text x="1026" y="345" text-anchor="middle" font-size="12.5" fill="#3A4150">
+    <tspan x="1026" dy="0">pANN이 threshold를 넘는 세포를 doublet으로 판정 —</tspan>
+    <tspan x="1026" dy="18">threshold는 예상 doublet 비율(로딩 세포 수 기준)로 결정</tspan>
+  </text>
+
+  <!-- footer -->
+  <text x="620" y="465" text-anchor="middle" font-size="11" font-style="italic" fill="#9AA3AF">원 논문의 개념을 참고해 새로 구성한 다이어그램입니다 (원본 그래픽 아브스트랙 아님)</text>
+</svg>
