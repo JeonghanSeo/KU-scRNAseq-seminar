@@ -28,6 +28,24 @@ Single-cell RNA-seq 기초 분석 실습 — Google Colab + Seurat (R)
 
 > ✅ 세미나 분석 샘플 (Young 2 + Old 2) | ❌ 세포 수 부족 또는 품질 이슈
 
+`data/filtered_feature_bc_matrix/`에 13개 샘플의 raw 10X 데이터(barcodes.tsv.gz, features.tsv.gz, matrix.mtx.gz)가 모두 포함되어 있습니다.
+
+### 데이터 다운로드
+
+**방법 1 — Git으로 전체 클론 (권장)**
+```bash
+git clone https://github.com/JeonghanSeo/KU-scRNAseq-seminar.git
+```
+
+**방법 2 — Git 없이 전체 다운로드 (Windows)**
+1. 저장소 메인 페이지 상단의 초록색 **Code** 버튼 클릭
+2. **Download ZIP** 클릭 → `KU-scRNAseq-seminar-main.zip` 다운로드
+3. 압축 해제 후 `data/filtered_feature_bc_matrix/` 폴더에서 필요한 샘플 사용
+
+**방법 3 — 필요한 샘플 폴더만 다운로드**
+- 개별 파일: 저장소에서 `data/filtered_feature_bc_matrix/<샘플명>/` 폴더로 들어가 각 파일(barcodes.tsv.gz, features.tsv.gz, matrix.mtx.gz) 클릭 → 우측 상단 **Download raw file** 버튼
+- 폴더 전체를 zip으로 받고 싶다면 [download-directory.github.io](https://download-directory.github.io/) 같은 서드파티 툴에 해당 폴더 URL(예: `https://github.com/JeonghanSeo/KU-scRNAseq-seminar/tree/main/data/filtered_feature_bc_matrix/16PCW`)을 붙여넣으면 그 샘플만 zip으로 받을 수 있습니다.
+
 ---
 
 ## 세미나 구성
