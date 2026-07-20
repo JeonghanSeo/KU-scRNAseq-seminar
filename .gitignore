@@ -1,5 +1,4 @@
-# 데이터 파일 (Google Drive로 공유)
-data/filtered_feature_bc_matrix/
+# 데이터 파일
 *.rds
 *.h5
 *.h5ad
