@@ -81,7 +81,7 @@ git clone https://github.com/JeonghanSeo/KU-scRNAseq-seminar.git
 
 1. 위 Colab 배지 클릭
 2. Runtime → Change runtime type → **R**
-3. Google Drive 연결 후 데이터 경로 설정
+3. Step 0 안내에 따라 Drive 공유 폴더 바로가기 추가 (R 패키지 로드용 — 데이터는 GitHub에서 자동으로 받아옵니다)
 4. Step 0부터 순서대로 실행
 
 > 세션이 끊기면 Step 0 (라이브러리 로드) 후 중간 체크포인트 셀에서 재개 가능
