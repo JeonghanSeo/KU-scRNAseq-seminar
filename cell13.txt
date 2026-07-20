@@ -1,0 +1,20 @@
+# ╔═══════════════════════════════════════════════════════╗
+# ║  강사 전용 — 세미나 전 1회 실행                          ║
+# ║  참가자는 이 셀을 건너뛰고 다음 셀을 실행하세요!          ║
+# ╚═══════════════════════════════════════════════════════╝
+
+# Drive 마운트
+system("python3 -c \"from google.colab import drive; drive.mount('/content/drive')\"")
+
+# 공유 폴더에 패키지 설치 (약 15~20분, 1회만)
+lib_path <- "/content/drive/MyDrive/KU_seminar/R_libs"
+dir.create(lib_path, recursive = TRUE, showWarnings = FALSE)
+
+install.packages(
+  c("Seurat", "harmony", "ggplot2", "patchwork"),
+  lib   = lib_path,
+  repos = "https://cloud.r-project.org"
+)
+
+cat("\n설치 완료! 참가자들이 Drive에서 바로 로드할 수 있습니다.\n")
+cat("경로:", lib_path, "\n")
